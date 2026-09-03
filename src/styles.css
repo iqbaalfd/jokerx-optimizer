@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+:root {
+  font-family:
+    "Plus Jakarta Sans",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+
+  --bg-main: #09090b;
+  --surface-glass: rgba(18, 18, 24, 0.75);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --accent-primary: #a855f7;
+  --accent-glow: rgba(168, 85, 247, 0.25);
+  --accent-border: rgba(168, 85, 247, 0.4);
+  --accent-subtle: rgba(168, 85, 247, 0.1);
+
+  color: #f8fafc;
+  background-color: var(--bg-main);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dynamic Accent Utilities for Tailwind v4 Compatibility */
+.bg-accent {
+  background-color: var(--accent-primary) !important;
+}
+
+.text-accent {
+  color: var(--accent-primary) !important;
+}
+
+.border-accent {
+  border-color: var(--accent-primary) !important;
+}
+
+.bg-accent-subtle {
+  background-color: var(--accent-subtle) !important;
+}
+
+.border-accent-border {
+  border-color: var(--accent-border) !important;
+}
+
+/* Custom Scrollbar yang Bersih & Padat */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Global Reset & Utility tambahan */
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--bg-main);
+  color: #f8fafc;
+}
+
+/* Floating Sidebar Style */
+.floating-sidebar {
+  background: var(--surface-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Card / Panel Clean Style */
+.clean-panel {
+  background: rgba(15, 15, 22, 0.6);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clean-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Tombol Solid & Tegas */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Smooth Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
