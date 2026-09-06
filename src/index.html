@@ -86,21 +86,18 @@
   <body
     class="bg-slate-950 text-slate-100 h-screen overflow-hidden flex flex-col select-none border border-slate-800/90 rounded-2xl transition-colors duration-300"
   >
-    <!-- Header Utama (Selaras & Glassmorphic) -->
     <header
       class="window-drag-region bg-slate-900/40 backdrop-blur-2xl border-b border-white/10 px-5 py-3.5 flex items-center justify-between z-30"
     >
-      <!-- Sisi Kiri: Identitas Brand (Stacked / Dua Baris) -->
       <div class="flex items-center">
         <div class="flex flex-col space-y-[-2px]">
-          <!-- Baris Atas: Nama Brand Utama -->
           <span class="text-xl font-black tracking-tighter text-white">
             JOKER<span
               class="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-primary to-white font-black"
               >X</span
             >
           </span>
-          <!-- Baris Bawah: Sub-Label Optimizer (Lebih rapat) -->
+
           <span
             class="text-[10px] font-black tracking-[0.3em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-accent to-slate-300"
           >
@@ -109,7 +106,6 @@
         </div>
       </div>
 
-      <!-- Kontrol Window (Minimize & Close) -->
       <div class="flex items-center space-x-0.5 ml-1">
         <button
           id="win-minimize"
@@ -126,11 +122,9 @@
       </div>
     </header>
 
-    <!-- Konten Utama & Sidebar Melayang -->
     <div
       class="flex-1 flex overflow-hidden p-4 gap-4 bg-gradient-to-br from-slate-950 via-slate-900/90 to-slate-950 relative"
     >
-      <!-- Pendaran Cahaya Ambient -->
       <div
         class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[140px] pointer-events-none"
       ></div>
@@ -138,7 +132,6 @@
         class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[140px] pointer-events-none"
       ></div>
 
-      <!-- Sidebar -->
       <aside
         class="w-72 bg-slate-900/40 backdrop-blur-2xl border border-white/10 rounded-3xl p-5 flex flex-col justify-between shadow-2xl shadow-black/50 z-20"
       >
@@ -184,11 +177,9 @@
           </nav>
         </div>
 
-        <!-- Bagian Bawah: Guard Shield & Dynamic Storage Bar -->
         <div
           class="p-4 bg-slate-900/80 border border-slate-800 rounded-2xl space-y-4 shadow-xl"
         >
-          <!-- Guard Shield Toggle Section -->
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-3">
               <div class="text-accent">
@@ -216,7 +207,6 @@
             </label>
           </div>
 
-          <!-- Main Storage Section (Single Clean Bar) -->
           <div class="pt-3 border-t border-slate-800 space-y-2">
             <div class="flex items-center justify-between text-xs">
               <span
@@ -230,7 +220,6 @@
               >
             </div>
 
-            <!-- Single Progress Bar Container -->
             <div
               class="w-full bg-slate-950 rounded-full h-2 overflow-hidden p-[1px] border border-slate-800"
             >
@@ -244,16 +233,13 @@
         </div>
       </aside>
 
-      <!-- Area Konten Tab (Selaras & Glassmorphic) -->
       <main
         class="flex-1 overflow-hidden bg-slate-900/60 backdrop-blur-3xl border border-white/10 rounded-3xl p-6 shadow-2xl relative flex flex-col"
       >
-        <!-- Tab 1: Dashboard -->
         <div
           id="tab-content-dashboard"
           class="tab-pane space-y-6 animate-fade-in flex-1"
         >
-          <!-- Banner Utama -->
           <div
             class="relative bg-slate-900/90 border border-slate-700/80 rounded-3xl p-6 shadow-2xl overflow-hidden group"
           >
@@ -301,9 +287,7 @@
             </div>
           </div>
 
-          <!-- Hardware Diagnostics Grid -->
           <div class="grid grid-cols-3 gap-5">
-            <!-- CPU Card -->
             <div
               class="bg-gradient-to-b from-slate-900/95 to-slate-950/95 border border-slate-700/60 hover:border-accent/60 transition-all duration-300 rounded-3xl p-5 shadow-2xl shadow-black/40 flex flex-col justify-between relative group overflow-hidden ring-1 ring-white/5"
             >
@@ -364,7 +348,6 @@
               </div>
             </div>
 
-            <!-- RAM Card -->
             <div
               class="bg-gradient-to-b from-slate-900/95 to-slate-950/95 border border-slate-700/60 hover:border-accent/60 transition-all duration-300 rounded-3xl p-5 shadow-2xl shadow-black/40 flex flex-col justify-between relative group overflow-hidden ring-1 ring-white/5"
             >
@@ -422,7 +405,6 @@
               </div>
             </div>
 
-            <!-- Storage Card -->
             <div
               class="bg-gradient-to-b from-slate-900/95 to-slate-950/95 border border-slate-700/60 hover:border-accent/60 transition-all duration-300 rounded-3xl p-5 shadow-2xl shadow-black/40 flex flex-col justify-between relative group overflow-hidden ring-1 ring-white/5"
             >
@@ -481,7 +463,6 @@
             </div>
           </div>
 
-          <!-- Konsol Aktivitas -->
           <div
             class="bg-gradient-to-b from-slate-900/95 to-slate-950/95 border border-slate-700/60 hover:border-accent/60 transition-all duration-300 rounded-3xl p-5 shadow-2xl shadow-black/40 flex flex-col h-48 relative overflow-hidden ring-1 ring-white/5"
           >
@@ -526,7 +507,6 @@
           </div>
         </div>
 
-        <!-- Tab 2: Storage Cleaner -->
         <div
           id="tab-content-storage-cleaner"
           class="tab-pane space-y-6 hidden animate-fade-in overflow-y-auto flex-1 pr-1"
@@ -664,7 +644,6 @@
           </div>
         </div>
 
-        <!-- Tab 3: Startup Apps -->
         <div
           id="tab-content-startup"
           class="tab-pane space-y-6 hidden animate-fade-in overflow-y-auto flex-1 pr-1"
@@ -749,7 +728,6 @@
           </div>
         </div>
 
-        <!-- Tab 4: Preferences -->
         <div
           id="tab-content-settings"
           class="tab-pane space-y-6 hidden animate-fade-in overflow-y-auto flex-1 pr-1"
@@ -865,7 +843,6 @@
       </main>
     </div>
 
-    <!-- About Application Modal -->
     <div
       id="about-modal"
       class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300"
@@ -950,7 +927,6 @@
       </div>
     </div>
 
-    <!-- Floating Theme Switcher -->
     <div class="absolute bottom-8 right-7 z-50">
       <div class="relative">
         <button
@@ -1008,13 +984,11 @@
       </div>
     </div>
 
-    <!-- Kontainer Notifikasi Toast -->
     <div
       id="toast-container"
       class="fixed bottom-5 right-5 z-50 flex flex-col space-y-2 pointer-events-none"
     ></div>
 
-    <!-- Skrip Ikon dan Eksternal -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="main.js" defer></script>
   </body>

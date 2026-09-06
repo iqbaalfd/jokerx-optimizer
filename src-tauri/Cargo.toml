@@ -5,7 +5,7 @@ description = "Advanced System Optimizer And Hardware Monitoring Utility"
 authors = ["Iqbal Fadillah"]
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
 
 [lib]
 name = "jokerx_optimizer_lib"

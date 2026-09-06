@@ -1,8 +1,6 @@
-// Inisialisasi Tauri v2 API (Mendukung core & window namespace v2)
 const invoke = window.__TAURI__?.core?.invoke || window.__TAURI__?.invoke;
 const tauriWindow = window.__TAURI__?.window;
 
-// Pengendali Jendela (Perkecil, Maksimalkan & Tutup) - Kompatibel dengan Tauri v2
 document.getElementById("win-minimize")?.addEventListener("click", async () => {
   try {
     if (tauriWindow && typeof tauriWindow.getCurrentWindow === "function") {
@@ -41,7 +39,6 @@ document.getElementById("win-close")?.addEventListener("click", async () => {
   }
 });
 
-// Sistem Navigasi Tab (Tampilan Multi-Halaman)
 const navTabs = document.querySelectorAll(".nav-tab");
 const tabPanes = document.querySelectorAll(".tab-pane");
 
@@ -87,7 +84,6 @@ navTabs.forEach((tab) => {
   });
 });
 
-// Konfigurasi Tema Warna Aksen
 const themes = {
   purple: {
     primary: "#a855f7",
@@ -128,7 +124,6 @@ function applyTheme(themeName) {
   updateToggleVisual();
 }
 
-// Kompatibilitas Dukungan 2 Jenis Pemilih Tema (Dropdown Tombol & Select Element)
 const themeBtn = document.getElementById("theme-menu-btn");
 const themeDropdown = document.getElementById("theme-dropdown");
 
@@ -168,7 +163,6 @@ document.getElementById("theme-selector")?.addEventListener("change", (e) => {
   catatLog(`Accent Theme Updated To ${e.target.value.toUpperCase()}.`, "info");
 });
 
-// Sistem Notifikasi Pemberitahuan (Toast)
 function tampilkanPemberitahuan(pesan, jenis = "success") {
   const container = document.getElementById("toast-container");
   if (!container) return;
@@ -209,7 +203,6 @@ function tampilkanPemberitahuan(pesan, jenis = "success") {
   }, 3500);
 }
 
-// Pencatatan Log Konsol Aktivitas
 function catatLog(pesan, jenis = "info") {
   const consoleBox = document.getElementById("console-log");
   if (!consoleBox) return;
@@ -236,7 +229,6 @@ function catatLog(pesan, jenis = "info") {
   consoleBox.scrollTop = consoleBox.scrollHeight;
 }
 
-// Eksekusi Scan Junk Files Manual
 document
   .getElementById("btn-scan-junk")
   ?.addEventListener("click", async () => {
@@ -278,7 +270,6 @@ document
     }
   });
 
-// Eksekusi Quick Scan
 document
   .getElementById("btn-quick-scan")
   ?.addEventListener("click", async () => {
@@ -330,7 +321,6 @@ async function muatUkuranJunk() {
   }
 }
 
-// Script Interaktif Toggle Shield / Guard
 const toggleBtn = document.getElementById("toggle-guard");
 let isShieldActive = true;
 
@@ -377,9 +367,7 @@ if (toggleBtn) {
   });
 }
 
-// Fungsi Terpusat Sinkronisasi Storage (Sidebar & Dashboard Utama)
 function updateStorageStats(freeStr, usagePercentNum) {
-  // 1. Update elemen Main Storage di Sidebar Bawah
   const sidebarFreeText = document.getElementById("storage-free-text");
   const sidebarProgressBar = document.getElementById("storage-progress-bar");
 
@@ -387,7 +375,6 @@ function updateStorageStats(freeStr, usagePercentNum) {
   if (sidebarProgressBar)
     sidebarProgressBar.style.width = `${usagePercentNum}%`;
 
-  // 2. Update elemen SSD Storage di Card Dashboard Utama
   const diskTextEl = document.getElementById("disk-text");
   const diskPercentEl = document.getElementById("disk-percent");
   const diskBarEl = document.getElementById("disk-bar");
@@ -398,7 +385,6 @@ function updateStorageStats(freeStr, usagePercentNum) {
   if (diskBarEl) diskBarEl.style.width = `${usagePercentNum}%`;
 }
 
-// Diagnostik Perangkat Keras & Penyegar Otomatis Real-Time
 async function muatSpesifikasiSistem() {
   try {
     if (invoke) {
@@ -432,10 +418,8 @@ async function muatSpesifikasiSistem() {
       const diskPercent =
         totalDiskNum > 0 ? (usedDiskNum / totalDiskNum) * 100 : 0;
 
-      // Panggil fungsi terpusat agar sidebar & dashboard utama sinkron
       updateStorageStats(`${specs.free_disk} Free`, diskPercent);
     } else {
-      // Development Mode Simulation
       const cpuEl = document.getElementById("cpu-name");
       if (cpuEl) cpuEl.innerText = "AMD Ryzen 7 5800H (Development Mode)";
 
@@ -456,7 +440,6 @@ async function muatSpesifikasiSistem() {
       const ramBarEl = document.getElementById("ram-bar");
       if (ramBarEl) ramBarEl.style.width = `${ramPercent}%`;
 
-      // Sinkronisasi data dummy pengembangan
       updateStorageStats("412.50 GB Free", 54.2);
     }
   } catch (error) {
@@ -480,7 +463,6 @@ document
     }
   });
 
-// Eksekusi Pembersihan Mendalam (Deep Clean)
 document.getElementById("btn-clean")?.addEventListener("click", async () => {
   const btn = document.getElementById("btn-clean");
   const titleEl = document.getElementById("clean-title");

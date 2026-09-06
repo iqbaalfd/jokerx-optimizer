@@ -28,7 +28,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Dynamic Accent Utilities for Tailwind v4 Compatibility */
 .bg-accent {
   background-color: var(--accent-primary) !important;
 }
@@ -49,7 +48,6 @@
   border-color: var(--accent-border) !important;
 }
 
-/* Custom Scrollbar yang Bersih & Padat */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -69,7 +67,6 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* Global Reset & Utility tambahan */
 * {
   box-sizing: border-box;
   user-select: none;
@@ -83,7 +80,6 @@ body {
   color: #f8fafc;
 }
 
-/* Floating Sidebar Style */
 .floating-sidebar {
   background: var(--surface-glass);
   backdrop-filter: blur(20px);
@@ -94,7 +90,6 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-/* Card / Panel Clean Style */
 .clean-panel {
   background: rgba(15, 15, 22, 0.6);
   border: 1px solid var(--border-subtle);
@@ -108,7 +103,6 @@ body {
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
-/* Tombol Solid & Tegas */
 button {
   cursor: pointer;
   font-family: inherit;
@@ -120,7 +114,6 @@ button:active {
   transform: scale(0.98);
 }
 
-/* Smooth Fade In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
