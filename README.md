@@ -3,7 +3,7 @@
 JokerX Optimizer adalah aplikasi desktop utilitas untuk mengoptimalkan dan merawat sistem komputer. Dibangun dengan fokus pada performa tinggi, aplikasi ini menggabungkan antarmuka modern yang ringan dengan keamanan maksimal di balik layar berkat dukungan Rust dan Tauri.
 
 <p align="center">
-  <img src="preview-jokerx-optimizer.png" alt="JokerX Optimizer Preview" width="100%" />
+  <img src="src/assets/preview-jokerx-optimizer.png" alt="JokerX Optimizer Preview" width="100%" />
 </p>
 
 ## Fitur Utama
