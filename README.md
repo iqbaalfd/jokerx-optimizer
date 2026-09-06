@@ -32,4 +32,4 @@ Pastikan di komputer Anda sudah terinstal **Node.js**, **Rust**, dan dependensi 
     npm install
 3. Jalankan Mode Development
    ```bash
-  npm run tauri dev
+    npm run tauri dev
